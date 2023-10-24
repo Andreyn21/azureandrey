@@ -1,0 +1,10 @@
+{
+	"name": "AzureKeyVault1Andrey",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://kv-fehazure.vault.azure.net/"
+		}
+	}
+}
