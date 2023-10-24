@@ -1,0 +1,23 @@
+{
+	"name": "AzureSqlDatabaseProtoflexon",
+	"properties": {
+		"description": "base segundaria",
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"connectionString": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault1protoflexon",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "DatabaseConnectionprotoflexoneh",
+				"secretVersion": "5f90c289936b4c85b1a994e2a46e9e46"
+			}
+		},
+		"connectVia": {
+			"referenceName": "AutoResolveIntegrationRuntime",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
