@@ -58,9 +58,22 @@
 				}
 			}
 		],
+		"parameters": {
+			"Schema1": {
+				"type": "array",
+				"defaultValue": "['Finance']"
+			},
+			"Schema2": {
+				"type": "array",
+				"defaultValue": "['dbo']"
+			}
+		},
 		"variables": {
 			"Table": {
-				"type": "String"
+				"type": "Array",
+				"defaultValue": [
+					"[\"LogisticsAddressCountryRegionStaging¨,\"PaymTermInvoiceStaging\",\"UFTProjInvoiceJourStaging\",\"aqs_canton\",\"aqs_cliente\"]"
+				]
 			}
 		},
 		"annotations": []
