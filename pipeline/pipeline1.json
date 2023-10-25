@@ -51,19 +51,33 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
+								"source": {
+									"type": "AzureSqlSource",
+									"queryTimeout": "02:00:00",
+									"partitionOption": "None"
+								},
 								"enableStaging": false
-							}
+							},
+							"inputs": [
+								{
+									"referenceName": "AzureSqlTable1",
+									"type": "DatasetReference",
+									"parameters": {
+										"Url_key_vault": "https://kv-fehazure.vault.azure.net/"
+									}
+								}
+							]
 						}
 					]
 				}
 			}
 		],
 		"parameters": {
-			"Schema1": {
+			"schema1": {
 				"type": "array",
 				"defaultValue": "['Finance']"
 			},
-			"Schema2": {
+			"schema2": {
 				"type": "array",
 				"defaultValue": "['dbo']"
 			}
