@@ -81,7 +81,7 @@
 									"referenceName": "AzureSqlTable1",
 									"type": "DatasetReference",
 									"parameters": {
-										"schema1": "@item().schema1",
+										"schema1": "@item().schema",
 										"table": "@item().table"
 									}
 								}
@@ -91,7 +91,7 @@
 									"referenceName": "AzureSqlTable1",
 									"type": "DatasetReference",
 									"parameters": {
-										"schema1": "@item().schema1",
+										"schema1": "@item().schema",
 										"table": "@item().table"
 									}
 								}
