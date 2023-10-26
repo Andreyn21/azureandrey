@@ -78,7 +78,7 @@
 									"referenceName": "AzureSqlTable2",
 									"type": "DatasetReference",
 									"parameters": {
-										"schema": {
+										"schema2": {
 											"value": "@item().schema",
 											"type": "Expression"
 										},
@@ -94,7 +94,7 @@
 									"referenceName": "AzureSqlTable2",
 									"type": "DatasetReference",
 									"parameters": {
-										"schema": {
+										"schema2": {
 											"value": "@item().schema2",
 											"type": "Expression"
 										},
