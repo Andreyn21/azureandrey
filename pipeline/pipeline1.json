@@ -52,7 +52,7 @@
 							"userProperties": [
 								{
 									"name": "source",
-									"value": "@item().schema2"
+									"value": "@item().schema"
 								}
 							],
 							"typeProperties": {
