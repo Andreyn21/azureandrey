@@ -2,7 +2,7 @@
 	"name": "AzureSqlTable2",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureSqlDatabaseProtoflexon",
+			"referenceName": "AzureSqlDatabaseflexon",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
@@ -22,7 +22,7 @@
 				"type": "Expression"
 			},
 			"table": {
-				"value": "@dataset().Table",
+				"value": "@dataset().tabla",
 				"type": "Expression"
 			}
 		}
