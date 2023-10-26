@@ -75,7 +75,7 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "AzureSqlTable1",
+									"referenceName": "AzureSqlTable1Destino",
 									"type": "DatasetReference",
 									"parameters": {
 										"schema": {
@@ -91,7 +91,7 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "AzureSqlTable2",
+									"referenceName": "AzureSqlTable2Origen",
 									"type": "DatasetReference",
 									"parameters": {
 										"schema2": {
