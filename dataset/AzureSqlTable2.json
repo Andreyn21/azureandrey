@@ -9,7 +9,7 @@
 			"schema2": {
 				"type": "string"
 			},
-			"table": {
+			"tabla": {
 				"type": "string"
 			}
 		},
