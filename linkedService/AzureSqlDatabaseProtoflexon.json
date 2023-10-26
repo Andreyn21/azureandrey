@@ -8,7 +8,7 @@
 			"connectionString": {
 				"type": "AzureKeyVaultSecret",
 				"store": {
-					"referenceName": "AzureKeyVault1protoflexon",
+					"referenceName": "AzureKeyVault1Dataflexon",
 					"type": "LinkedServiceReference"
 				},
 				"secretName": "DatabaseConnectionprotoflexoneh",
