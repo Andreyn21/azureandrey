@@ -56,15 +56,35 @@
 									"queryTimeout": "02:00:00",
 									"partitionOption": "None"
 								},
-								"enableStaging": false
+								"sink": {
+									"type": "AzureSqlSink",
+									"writeBehavior": "insert",
+									"sqlWriterUseTableLock": false
+								},
+								"enableStaging": false,
+								"translator": {
+									"type": "TabularTranslator",
+									"typeConversion": true,
+									"typeConversionSettings": {
+										"allowDataTruncation": true,
+										"treatBooleanAsNumber": false
+									}
+								}
 							},
 							"inputs": [
 								{
 									"referenceName": "AzureSqlTable1",
 									"type": "DatasetReference",
 									"parameters": {
-										"Url_key_vault": "https://kv-fehazure.vault.azure.net/"
+										"Url_key_vault": "https://kv-fehazure.vault.azure.net/",
+										"Schema1": "@item().schema1"
 									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "AzureSqlTable1",
+									"type": "DatasetReference"
 								}
 							]
 						}
@@ -75,11 +95,11 @@
 		"parameters": {
 			"schema1": {
 				"type": "array",
-				"defaultValue": "['Finance']"
+				"defaultValue": "Finance"
 			},
 			"schema2": {
 				"type": "array",
-				"defaultValue": "['dbo']"
+				"defaultValue": "dbo"
 			}
 		},
 		"variables": {
