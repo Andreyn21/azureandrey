@@ -101,7 +101,7 @@
 											"value": "@item().shema",
 											"type": "Expression"
 										},
-										"table": {
+										"tabla": {
 											"value": "@item().tabla",
 											"type": "Expression"
 										}
