@@ -75,18 +75,8 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "AzureSqlTable1",
-									"type": "DatasetReference",
-									"parameters": {
-										"schema": {
-											"value": "@item().schema",
-											"type": "Expression"
-										},
-										"tabla": {
-											"value": "@item().tabla",
-											"type": "Expression"
-										}
-									}
+									"referenceName": "AzureSqlTable2",
+									"type": "DatasetReference"
 								}
 							],
 							"outputs": [
@@ -94,7 +84,7 @@
 									"referenceName": "AzureSqlTable2",
 									"type": "DatasetReference",
 									"parameters": {
-										"schema2": {
+										"schema": {
 											"value": "@item().schema2",
 											"type": "Expression"
 										},
