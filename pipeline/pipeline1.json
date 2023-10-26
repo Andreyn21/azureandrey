@@ -33,7 +33,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@variables('Table')",
+						"value": "@variables('table')",
 						"type": "Expression"
 					},
 					"isSequential": true,
@@ -81,9 +81,8 @@
 									"referenceName": "AzureSqlTable1",
 									"type": "DatasetReference",
 									"parameters": {
-										"Url_key_vault": "https://kv-fehazure.vault.azure.net/",
-										"Schema1": "@item().schema1",
-										"Table": "@item().table"
+										"schema1": "@item().schema1",
+										"table": "@item().table"
 									}
 								}
 							],
@@ -92,8 +91,8 @@
 									"referenceName": "AzureSqlTable1",
 									"type": "DatasetReference",
 									"parameters": {
-										"Schema1": "@item().schema1",
-										"Table": "@item().table"
+										"schema1": "@item().schema1",
+										"table": "@item().table"
 									}
 								}
 							]

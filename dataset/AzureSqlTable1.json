@@ -6,13 +6,10 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"Url_key_vault": {
+			"schema1": {
 				"type": "string"
 			},
-			"Schema1": {
-				"type": "string"
-			},
-			"Table": {
+			"table": {
 				"type": "string"
 			}
 		},
@@ -21,11 +18,11 @@
 		"schema": [],
 		"typeProperties": {
 			"schema": {
-				"value": "@dataset().Schema1",
+				"value": "@dataset().schema1",
 				"type": "Expression"
 			},
 			"table": {
-				"value": "@dataset().Table",
+				"value": "@dataset().table",
 				"type": "Expression"
 			}
 		}
