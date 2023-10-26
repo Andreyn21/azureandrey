@@ -1,0 +1,22 @@
+{
+	"name": "AzureSqlDatabase1",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"connectionString": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault1Dataflexon",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "DatabaseConnectionflexoneh",
+				"secretVersion": "fb458d1413af423e8cb2c4a1039a85a2"
+			}
+		},
+		"connectVia": {
+			"referenceName": "AutoResolveIntegrationRuntime",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
