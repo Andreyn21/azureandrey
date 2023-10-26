@@ -81,8 +81,14 @@
 									"referenceName": "AzureSqlTable1",
 									"type": "DatasetReference",
 									"parameters": {
-										"schema1": "@item().schema",
-										"table": "@item().table"
+										"schema1": {
+											"value": "@item().schema",
+											"type": "Expression"
+										},
+										"table": {
+											"value": "@item().table",
+											"type": "Expression"
+										}
 									}
 								}
 							],
@@ -91,8 +97,14 @@
 									"referenceName": "AzureSqlTable1",
 									"type": "DatasetReference",
 									"parameters": {
-										"schema1": "@{item().schema}.@{item().tabla}",
-										"table": "@{item().schema2}.@{item().tabla}"
+										"schema1": {
+											"value": "@item().shema",
+											"type": "Expression"
+										},
+										"table": {
+											"value": "@item().tabla",
+											"type": "Expression"
+										}
 									}
 								}
 							]
