@@ -104,7 +104,7 @@
 		"parameters": {
 			"schema": {
 				"type": "array",
-				"defaultValue": "finance"
+				"defaultValue": "['finance']"
 			},
 			"schema2": {
 				"type": "array",
