@@ -52,7 +52,7 @@
 							"userProperties": [
 								{
 									"name": "source",
-									"value": "@item().schema1"
+									"value": "@item().schema2"
 								}
 							],
 							"typeProperties": {
@@ -78,11 +78,11 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "AzureSqlTable1",
+									"referenceName": "AzureSqlTable2",
 									"type": "DatasetReference",
 									"parameters": {
-										"schema1": {
-											"value": "@item().schema",
+										"schema2": {
+											"value": "@item().schema2",
 											"type": "Expression"
 										},
 										"table": {
