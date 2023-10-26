@@ -112,11 +112,11 @@
 		],
 		"parameters": {
 			"schema": {
-				"type": "array",
+				"type": "string",
 				"defaultValue": "finance"
 			},
 			"schema2": {
-				"type": "array",
+				"type": "string",
 				"defaultValue": "dbo"
 			}
 		},
