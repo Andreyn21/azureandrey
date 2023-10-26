@@ -49,7 +49,12 @@
 								"secureOutput": false,
 								"secureInput": false
 							},
-							"userProperties": [],
+							"userProperties": [
+								{
+									"name": "source",
+									"value": "@item().schema1"
+								}
+							],
 							"typeProperties": {
 								"source": {
 									"type": "AzureSqlSource",
@@ -77,14 +82,19 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"Url_key_vault": "https://kv-fehazure.vault.azure.net/",
-										"Schema1": "@item().schema1"
+										"Schema1": "@item().schema1",
+										"Table": "@item().table"
 									}
 								}
 							],
 							"outputs": [
 								{
 									"referenceName": "AzureSqlTable1",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"Schema1": "@item().schema1",
+										"Table": "@item().table"
+									}
 								}
 							]
 						}
@@ -93,7 +103,7 @@
 			}
 		],
 		"parameters": {
-			"schema1": {
+			"schema": {
 				"type": "array",
 				"defaultValue": "Finance"
 			},
