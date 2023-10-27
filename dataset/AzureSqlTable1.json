@@ -1,5 +1,5 @@
 {
-	"name": "AzureSqlTable1Destino",
+	"name": "AzureSqlTable1",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureSqlDatabaseProtoflexon",
