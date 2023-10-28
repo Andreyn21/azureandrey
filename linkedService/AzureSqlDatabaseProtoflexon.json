@@ -2,10 +2,15 @@
 	"name": "AzureSqlDatabaseProtoflexon",
 	"properties": {
 		"description": "base segundaria",
-		"annotations": [
-			"Url_key_Vault",
-			"Secret_key_vault"
-		],
+		"parameters": {
+			"Url_key_Vault": {
+				"type": "string"
+			},
+			"Secret_key_vault": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
 		"type": "AzureSqlDatabase",
 		"typeProperties": {
 			"connectionString": {
