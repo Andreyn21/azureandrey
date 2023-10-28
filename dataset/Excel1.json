@@ -8,13 +8,39 @@
 		"annotations": [],
 		"type": "Excel",
 		"typeProperties": {
+			"sheetName": "Hoja1",
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "cantidad",
-				"folderPath": "ejercicio3",
-				"container": "Contenedores"
-			}
+				"fileName": "PRUEBA_Plantilla_Ecuador.xlsx",
+				"container": "ejercicio3"
+			},
+			"firstRowAsHeader": true
 		},
-		"schema": []
+		"schema": [
+			{
+				"name": "ufn_sociedadesfoid",
+				"type": "String"
+			},
+			{
+				"name": "ufn_name",
+				"type": "String"
+			},
+			{
+				"name": "ufn_clienteid",
+				"type": "String"
+			},
+			{
+				"name": "ufn_paisid",
+				"type": "String"
+			},
+			{
+				"name": "ufn_estadosincronizacionfo",
+				"type": "String"
+			},
+			{
+				"name": "ufn_sociedadufinetid",
+				"type": "String"
+			}
+		]
 	}
 }
