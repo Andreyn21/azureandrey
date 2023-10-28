@@ -1,5 +1,5 @@
 {
-	"name": "Excel1",
+	"name": "ExcelData",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureBlobStorage1",
@@ -8,37 +8,49 @@
 		"annotations": [],
 		"type": "Excel",
 		"typeProperties": {
-			"sheetName": "Hoja1",
+			"sheetName": "Sheet1",
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "PRUEBA_Plantilla_Ecuador.xlsx",
+				"fileName": "cantidad.xlsx",
 				"container": "ejercicio3"
 			},
 			"firstRowAsHeader": true
 		},
 		"schema": [
 			{
-				"name": "ufn_sociedadesfoid",
+				"name": "Item resumen",
 				"type": "String"
 			},
 			{
-				"name": "ufn_name",
+				"name": "Bodega",
 				"type": "String"
 			},
 			{
-				"name": "ufn_clienteid",
+				"name": "Desc. bodega",
 				"type": "String"
 			},
 			{
-				"name": "ufn_paisid",
+				"name": "Cant. compro. exist.",
 				"type": "String"
 			},
 			{
-				"name": "ufn_estadosincronizacionfo",
+				"name": "Cant. compromisos",
 				"type": "String"
 			},
 			{
-				"name": "ufn_sociedadufinetid",
+				"name": "Cant. diferencia",
+				"type": "String"
+			},
+			{
+				"name": "Cant. adic. compro. exist.",
+				"type": "String"
+			},
+			{
+				"name": "Cant. adic compromisos",
+				"type": "String"
+			},
+			{
+				"name": "Cant. adic diferencias",
 				"type": "String"
 			}
 		]
