@@ -55,7 +55,9 @@
 					"sink": {
 						"type": "AzureSqlSink",
 						"writeBehavior": "insert",
-						"sqlWriterUseTableLock": false
+						"sqlWriterUseTableLock": false,
+						"tableOption": "autoCreate",
+						"disableMetricsCollection": false
 					},
 					"enableStaging": false,
 					"translator": {
@@ -78,7 +80,10 @@
 						"referenceName": "genericdataset",
 						"type": "DatasetReference",
 						"parameters": {
-							"schema": "prb"
+							"schema": "prb",
+							"tabla": "dataexcel",
+							"Url_key_Vault": "https://kv-fehazure.vault.azure.net/",
+							"Secret_key_vault": "DatabaseConnectionprotoflexoneh"
 						}
 					}
 				]
