@@ -1099,6 +1099,127 @@
 							"enableStaging": false,
 							"translator": {
 								"type": "TabularTranslator",
+								"mappings": [
+									{
+										"source": {
+											"name": "Item resumen",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Item resumen",
+											"type": "String",
+											"physicalType": "nvarchar"
+										}
+									},
+									{
+										"source": {
+											"name": "Bodega",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Bodega",
+											"type": "String",
+											"physicalType": "nvarchar"
+										}
+									},
+									{
+										"source": {
+											"name": "Desc. bodega",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Desc. bodega",
+											"type": "String",
+											"physicalType": "nvarchar"
+										}
+									},
+									{
+										"source": {
+											"name": "Cant. compro. exist.",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Cant. compro. exist.",
+											"type": "String",
+											"physicalType": "nvarchar"
+										}
+									},
+									{
+										"source": {
+											"name": "Cant. compromisos",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Cant. compromisos",
+											"type": "String",
+											"physicalType": "nvarchar"
+										}
+									},
+									{
+										"source": {
+											"name": "Cant. diferencia",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Cant. diferencia",
+											"type": "String",
+											"physicalType": "nvarchar"
+										}
+									},
+									{
+										"source": {
+											"name": "Cant. adic. compro. exist.",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Cant. adic. compro. exist.",
+											"type": "String",
+											"physicalType": "nvarchar"
+										}
+									},
+									{
+										"source": {
+											"name": "Cant. adic compromisos",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Cant. adic compromisos",
+											"type": "String",
+											"physicalType": "nvarchar"
+										}
+									},
+									{
+										"source": {
+											"name": "Cant. adic diferencias",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Cant. adic diferencias",
+											"type": "String",
+											"physicalType": "nvarchar"
+										}
+									},
+									{
+										"source": {
+											"name": "Columna_prueba",
+											"type": "String"
+										},
+										"sink": {
+											"name": "Columna_prueba",
+											"type": "String",
+											"physicalType": "nvarchar"
+										}
+									}
+								],
 								"typeConversion": true,
 								"typeConversionSettings": {
 									"allowDataTruncation": true,
@@ -1419,6 +1540,36 @@
 			]
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/trigger_ejerccio3')]",
+			"type": "Microsoft.DataFactory/factories/triggers",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"runtimeState": "Started",
+				"pipelines": [
+					{
+						"pipelineReference": {
+							"referenceName": "pipeline3",
+							"type": "PipelineReference"
+						},
+						"parameters": {}
+					}
+				],
+				"type": "ScheduleTrigger",
+				"typeProperties": {
+					"recurrence": {
+						"frequency": "Minute",
+						"interval": 10,
+						"startTime": "2023-10-28T01:59:00",
+						"timeZone": "SA Pacific Standard Time"
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/pipelines/pipeline3')]"
+			]
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/AutoResolveIntegrationRuntime')]",
 			"type": "Microsoft.DataFactory/factories/integrationRuntimes",
 			"apiVersion": "2018-06-01",
@@ -1449,36 +1600,6 @@
 			"apiVersion": "2018-06-01",
 			"properties": {},
 			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/trigger_ejerccio3')]",
-			"type": "Microsoft.DataFactory/factories/triggers",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"annotations": [],
-				"runtimeState": "Started",
-				"pipelines": [
-					{
-						"pipelineReference": {
-							"referenceName": "pipeline3",
-							"type": "PipelineReference"
-						},
-						"parameters": {}
-					}
-				],
-				"type": "ScheduleTrigger",
-				"typeProperties": {
-					"recurrence": {
-						"frequency": "Minute",
-						"interval": 10,
-						"startTime": "2023-10-28T01:59:00",
-						"timeZone": "SA Pacific Standard Time"
-					}
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/pipelines/pipeline3')]"
-			]
 		}
 	]
 }
