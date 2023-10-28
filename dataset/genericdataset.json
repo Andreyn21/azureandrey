@@ -3,10 +3,44 @@
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureSqlDatabaseProtoflexon",
-			"type": "LinkedServiceReference"
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"Url_key_Vault": {
+					"value": "@dataset().Url_key_Vault",
+					"type": "Expression"
+				},
+				"Secret_key_vault": {
+					"value": "@dataset().Secret_key_vault",
+					"type": "Expression"
+				}
+			}
+		},
+		"parameters": {
+			"schema": {
+				"type": "string"
+			},
+			"tabla": {
+				"type": "string"
+			},
+			"Url_key_Vault": {
+				"type": "string"
+			},
+			"Secret_key_vault": {
+				"type": "string"
+			}
 		},
 		"annotations": [],
 		"type": "AzureSqlTable",
-		"schema": []
+		"schema": [],
+		"typeProperties": {
+			"schema": {
+				"value": "@dataset().schema",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().tabla",
+				"type": "Expression"
+			}
+		}
 	}
 }
