@@ -1,0 +1,29 @@
+{
+	"name": "trigger3",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pipeline1",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"schema": "finance",
+					"schema2": "dbo"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 10,
+				"startTime": "2023-10-31T22:00:00",
+				"endTime": "2023-11-01T02:57:00",
+				"timeZone": "SA Pacific Standard Time"
+			}
+		}
+	}
+}
