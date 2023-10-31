@@ -9,6 +9,16 @@
 					"referenceName": "pipeline3",
 					"type": "PipelineReference"
 				}
+			},
+			{
+				"pipelineReference": {
+					"referenceName": "pipeline1",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"schema": "finance",
+					"schema2": "dbo"
+				}
 			}
 		],
 		"type": "ScheduleTrigger",
@@ -16,7 +26,7 @@
 			"recurrence": {
 				"frequency": "Minute",
 				"interval": 10,
-				"startTime": "2023-10-28T01:59:00",
+				"startTime": "2023-10-30T21:51:00",
 				"timeZone": "SA Pacific Standard Time"
 			}
 		}
